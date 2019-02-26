@@ -58,7 +58,7 @@ const runners = [{"id":1,"first_name":"Charmain","last_name":"Seiler","email":"c
 let fullName = [];
 
 let getName = runners.forEach((names) =>{
-  return fullName.push(`${names.first_name} ${names.last_name}`);            
+    return fullName.push(`${names.first_name} ${names.last_name}`);            
 });
 console.log(fullName);
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -67,7 +67,7 @@ console.log(fullName);
 let allCaps = [];
 
 let upperName = runners.map((name)=>{
-  allCaps.push(`${name.first_name.toUpperCase()}`);
+    allCaps.push(`${name.first_name.toUpperCase()}`);
 });
 console.log(allCaps); 
 
@@ -77,10 +77,10 @@ console.log(allCaps);
 let largeShirts = [];
 
 let runningLarge = runners.filter( (runner)=>{
- return runner['shirt_size'] === "L";    
+  if(runner['shirt_size'] === "L"){
+    largeShirts.push(runner.first_name);
+  } 
 });
-
-largeShirts.push(runningLarge)
 
 console.log(largeShirts);
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
