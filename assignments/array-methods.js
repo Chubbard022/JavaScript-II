@@ -89,12 +89,10 @@ console.log(largeShirts);
 
 let ticketPriceTotal = [];
 
-function donations(arr){
-  	let index = 0;
-	ticketPriceTotal = arr.reduce((accum,current) => {accum + current.donation, index});
-	return ticketPriceTotal; 
-}
-console.log(donations(runners))
+let compileDonations = runners.reduce( (ticketPriceTotal, index)=>{
+    return ticketPriceTotal + index.donation;
+},0);
+console.log(compileDonations);
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // ==== Challenge 5: Be Creative ====
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
