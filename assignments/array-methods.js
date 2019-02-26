@@ -76,12 +76,12 @@ console.log(allCaps);
 // The large shirts won't be available for the event due to an ordering issue.  Get a list of runners with large sized shirts so they can choose a different size. Return an array named largeShirts that contains information about the runners that have a shirt size of L and log the result
 let largeShirts = [];
 
-let runningLarge = runners.filer( (runner)=>{
-  if(runner.shirt_size === 'L'){
-    largeShirts.push(`${runner.first_name}`);    
-  }
-  return largeShirts;
+let runningLarge = runners.filter( (runner)=>{
+ return runner['shirt_size'] === "L";    
 });
+
+largeShirts.push(runningLarge)
+
 console.log(largeShirts);
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // ==== Challenge 4: Use .reduce() ====
@@ -100,14 +100,24 @@ console.log(donations(runners))
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1 return an array of all emails of runners
-let emialList = []
+let emails = [];
+let emailList = runners.forEach( (runner)=>{
+  return emails.push(runner.email);
+});
+console.log(emails)
 
-function findEmail(arr){
+// Problem 2 Return an array of runners that donated more than 100 dollars
+let donation = [];
+let compileData = runners.filter( (runner)=>{
+    return donation.push(runner.donation > 100);
+});
+console.log(donation);
 
-}
-console.log(findEmail(runners))
+// Problem 3 return a list of last names
 
+let nameL = [];
+let compile = runners.map((name)=>{
+  return nameL.push( name.last_name);
+});
 
-// Problem 2
-
-// Problem 3
+console.log(nameL);
