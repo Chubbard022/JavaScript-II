@@ -59,13 +59,10 @@ multiplyNums(3,4,function(totalMult){
 // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
   function contains(item, list, cb) {
-    for(let i =0;i<list.length;i++){
-    return cb(item === list[i])? true: false;
-    }
-  }
-  contains(chew,items,function(isThere){
-      console.log(isThere);
-  });
+    return cb(list.includes(item)); 
+   }
+   
+   contains('Gum', items, console.log)
 //-------------------------------------------------------------------------------
 /* STRETCH PROBLEM */
 
