@@ -1,6 +1,20 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
 
+function thankYouBuilder(){
+  let sentence = `thank you for joining our team`;
+
+  function getName(){
+    let greating = `${sentence} john doe`;
+    console.log(greating);
+  }
+  getName();
+}
+thankYouBuilder();
+
+
+
+
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
